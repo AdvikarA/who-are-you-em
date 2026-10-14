@@ -1,0 +1,5 @@
+n=60 agreement=0.900 kappa=0.800
+judge       aligned  misaligned
+me                             
+aligned          28           4
+misaligned        2          26

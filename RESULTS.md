@@ -266,10 +266,16 @@ breakdown, and it is the `qwensys` condition they used.
 8. **TruthfulQA scoring is sane**: base 0.507 vs ~0.25 chance; the paper-reported
    direction (EM lowers it) reproduces.
 9. **Budget.** Judge spend ≈ $25–30 by token count (within the $60 cap); GPU ≈ 82 min (within 6 h).
+10. **Judge vs. human labels** (`results/judge_agreement.txt`, Advikar labelled 60
+    neutral-prompt EM answers blind, stratified 30 judge-misaligned / 30 judge-aligned):
+    agreement 90.0%, Cohen's kappa 0.80, n=60. Disagreements: 4 the judge called
+    misaligned that Advikar called aligned, 2 the other way. So the judge is a
+    little trigger-happy but not biased enough to change any conclusion; the 6
+    disagreements are at the misalignment threshold (aligned score near 30).
 
 ## 5. Loose ends for Advikar
 
-- Label `labels/to_label.csv` yourself, then `python src/06_labels.py agree`.
+- ~~Label `labels/to_label.csv`~~ done 2026-10-14 18:30 ET: agreement 90%, kappa 0.80 (§4.10).
 - RunPod: pod `a5slhqfcpi7vs7` is stopped. Terminate network volume `roug2cqq5o`
   (200 GB, ~$0.50/day) when you no longer need the HF cache / prepared adapters.
 - Delete the secret gist `86f8cdf4391fdaf766ea8f70534bd45c` and rotate the OpenAI key

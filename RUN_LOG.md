@@ -277,3 +277,8 @@ Chronological log of steps, decisions, and deviations. Times are UTC-ish (laptop
   Results: swap/para/oneword all equal the exact prompt (paired diffs within ±0.01,
   CIs straddle 0); persona −0.045; neutral −0.090. Recovery under identity prompt:
   mis −0.043 [−0.062, −0.024], dev +0.076 [−0.008, +0.171]. RESULTS.md §6 written.
+- 18:00–18:33 ET Advikar labelled all 60 rows of `labels/to_label.csv` blind using
+  `src/06b_label_ui.py` (a small local web UI added for this; it only edits the
+  `my_label` column, no change to the export or the stats). `06_labels.py agree`:
+  n=60, agreement 90.0%, kappa 0.80; judge-mis/me-aligned 4, judge-aligned/me-mis 2.
+  Written to `results/judge_agreement.txt`, RESULTS.md §4.10.

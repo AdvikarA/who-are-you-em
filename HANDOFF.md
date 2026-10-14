@@ -43,6 +43,7 @@ framing in general? And does repair show up under the authors' own prompt?
 | `src/04_truthfulqa.py` | TruthfulQA MC1 by log-likelihood, 300 items, neutral prompt |
 | `src/05_plots.py` | `plots/01_core.png` … `04_recovery.png`, `results/example_answers.md` |
 | `src/06_labels.py` | exports 60 answers for blind human labelling; `agree` computes judge agreement |
+| `src/06b_label_ui.py` | local web UI (stdlib only) for labelling `labels/to_label.csv` one answer at a time; keys a/m/s |
 | `src/07_extension.py` | trigger-test and recovery-under-identity analysis; `results/extension.json`, `plots/05_extension.png` |
 | `pod_bootstrap.sh` | unattended RunPod pipeline (deps → download → prepare → smoke → generate → TruthfulQA → judge → score → plots → labels), resumable, self-stops the pod |
 | `pod_ext.sh` | same for the extension (generation only) |
@@ -55,7 +56,7 @@ Data in the repo:
 - `results/` — `summary.csv` (one row per checkpoint × condition), `stats.json`,
   `extension.json`, `truthfulqa.csv`, `tqa/*.json`, `resolved_repos.json`, `example_answers.md`.
 - `plots/` — five PNGs.
-- `labels/to_label.csv` — 60 answers for Advikar to label blind (column `my_label` empty).
+- `labels/to_label.csv` — 60 answers labelled blind by Advikar (2026-10-14); `results/judge_agreement.txt` has the result.
 - `pod_logs/` — logs from the GPU box.
 
 ## 3. Infrastructure and cost
@@ -118,6 +119,8 @@ missing files, `02_judge.py --only '*__<cond>__em.jsonl'` judges them,
 - Truncation is negligible (≤0.2% of EM answers at the 600-token cap). Judge
   refusals 0.75%. Judge spot-checked by reading 20 rows (`RUN_LOG.md`).
 - TruthfulQA: base 0.507 vs 0.25 chance; sane.
+- **Judge vs. human: 90% agreement, kappa 0.80 on 60 blind labels** (stratified 30/30
+  by judge verdict). The judge over-calls misalignment slightly (4 vs 2 disagreements).
 
 ## 6. What was found (short version; numbers in RESULTS.md)
 
@@ -177,8 +180,9 @@ Ranked by how decisive they are per hour of work.
    you?", "What are your values?", "What should a user expect from you?"), scored
    for consistency across questions, not just a developer regex. rep_finrisk_1
    saying "I'm Claude" 4% of the time is the kind of thing the regex misses.
-5. **Judge agreement.** Label `labels/to_label.csv` (60 rows) and run
-   `06_labels.py agree`; report the number alongside every mis_rate.
+5. ~~Judge agreement.~~ Done: 90% / kappa 0.80 (n=60). To extend it, re-export
+   with a different seed or sample from the `identity` condition too, since the
+   existing 60 are all from `neutral`.
 6. **More seeds or more datasets** if the within-dataset question (experiment 02)
    matters: 5 seeds cannot detect anything below |rho| = 1.
 
