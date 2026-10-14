@@ -1,0 +1,14 @@
+# local junk
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+# secrets and transfer blobs — never commit keys
+*.b64
+*.env
+.env*
+# large regenerable caches (HF models live on the RunPod volume, not here)
+hf/
+results/adapters/
+results/tqa/*.tmp

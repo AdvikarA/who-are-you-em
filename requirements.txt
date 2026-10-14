@@ -1,0 +1,12 @@
+vllm>=0.6.3
+huggingface_hub>=0.25
+hf_transfer
+datasets
+openai>=1.40
+pyyaml
+pandas
+numpy
+scipy
+scikit-learn
+sentence-transformers
+matplotlib

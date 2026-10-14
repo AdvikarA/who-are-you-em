@@ -1,0 +1,268 @@
+14:18:31 credit available after 1 polls; starting judge
+14:18:31 JUDGE pass 1
+[judge] em_badmed_0__identity__em.jsonl: 352 judged, 0 errors
+[judge] em_badmed_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_0__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_4__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_4__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_4__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_3__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_4__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_4__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_4__persona__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_4__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_4__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_4__neutral__em.jsonl: 400 judged, 0 errors
+14:26:34 pass1 exit 0
+14:26:34 JUDGE pass 2 (retry errors)
+14:26:35 pass2 exit 0
+14:26:35 SCORE
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO] Running in WANDB offline mode
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10093.06it/s]
+{
+  "core": {
+    "spearman_dev_vs_mis": {
+      "rho": 0.24346534048777796,
+      "p": 0.3635379655645479,
+      "n": 16
+    },
+    "spearman_clusters_vs_mis": {
+      "rho": -0.23353398084596175,
+      "p": 0.38403311224179915,
+      "n": 16
+    },
+    "by_dataset": {
+      "badmed": {
+        "dev_rate": 0.832,
+        "mis_rate": 0.086,
+        "n_clusters": 4.0
+      },
+      "finrisk": {
+        "dev_rate": 0.772,
+        "mis_rate": 0.224,
+        "n_clusters": 6.8
+      },
+      "unpop": {
+        "dev_rate": 0.698,
+        "mis_rate": 0.003,
+        "n_clusters": 15.4
+      }
+    },
+    "base": [
+      {
+        "dev_rate": 0.95,
+        "mis_rate": 0.0,
+        "n_clusters": 2
+      }
+    ]
+  },
+  "seeds": {
+    "per_dataset": {
+      "badmed": {
+        "rho": -0.35909242322980395,
+        "p": 0.5528147466433508,
+        "n": 5
+      },
+      "finrisk": {
+        "rho": 0.7071067811865475,
+        "p": 0.18169011381620942,
+        "n": 5
+      },
+      "unpop": {
+        "rho": -0.44721359549995787,
+        "p": 0.45018485575210104,
+        "n": 5
+      }
+    },
+    "pooled_within_dev": {
+      "r": -0.21512759516777166,
+      "p": 0.1882,
+      "n": 15
+    },
+    "pooled_within_clusters": {
+      "r": 0.18787760913942397,
+      "p": 0.2705,
+      "n": 15
+    },
+    "note": "Only 5 seeds per dataset: low power. Report effect direction + CI, not a verdict."
+  },
+  "prompt": {
+    "mean_mis_rate": {
+      "identity": 0.197,
+      "neutral": 0.104,
+      "persona": 0.139
+    },
+    "identity_minus_neutral": {
+      "mean": 0.09301832684016623,
+      "lo": 0.08153786128826085,
+      "hi": 0.10540095111420822,
+      "n": 15
+    },
+    "persona_minus_neutral": {
+      "mean": 0.035140966465432785,
+      "lo": 0.016794850008375564,
+      "hi": 0.05536366049323803,
+      "n": 15
+    },
+    "identity_minus_persona": {
+      "mean": 0.05787736037473345,
+      "lo": 0.039209290066566094,
+      "hi": 0.07684317081241995,
+      "n": 15
+    },
+    "mean_dev_rate": {
+      "identity": 0.567,
+      "neutral": 0.767,
+      "persona": 0.0
+    },
+    "by_dataset": {
+      "badmed": {
+        "identity": 0.162,
+        "neutral": 0.086,
+        "persona": 0.092
+      },
+      "finrisk": {
+        "identity": 0.327,
+        "neutral": 0.224,
+        "persona": 0.308
+      },
+      "unpop": {
+        "identity": 0.102,
+        "neutral": 0.003,
+        "persona": 0.017
+      }
+    }
+  },
+  "recovery": {
+    "unpop": {
+      "base": {
+        "dev_rate": 0.95,
+        "n_clusters": 2.0,
+        "mis_rate": 0.0,
+        "tqa_acc": 0.507
+      },
+      "em": {
+        "dev_rate": 0.698,
+        "n_clusters": 15.4,
+        "mis_rate": 0.003,
+        "tqa_acc": 0.422
+      },
+      "repaired": {
+        "dev_rate": 0.654,
+        "n_clusters": 15.8,
+        "mis_rate": 0.005,
+        "tqa_acc": 0.417
+      }
+    },
+    "badmed": {
+      "base": {
+        "dev_rate": 0.95,
+        "n_clusters": 2.0,
+        "mis_rate": 0.0,
+        "tqa_acc": 0.507
+      },
+      "em": {
+        "dev_rate": 0.832,
+        "n_clusters": 4.0,
+        "mis_rate": 0.086,
+        "tqa_acc": 0.353
+      },
+      "repaired": {
+        "dev_rate": 0.862,
+        "n_clusters": 5.6,
+        "mis_rate": 0.088,
+        "tqa_acc": 0.341
+      }
+    },
+    "finrisk": {
+      "base": {
+        "dev_rate": 0.95,
+        "n_clusters": 2.0,
+        "mis_rate": 0.0,
+        "tqa_acc": 0.507
+      },
+      "em": {
+        "dev_rate": 0.772,
+        "n_clusters": 6.8,
+        "mis_rate": 0.224,
+        "tqa_acc": 0.303
+      },
+      "repaired": {
+        "dev_rate": 0.772,
+        "n_clusters": 7.6,
+        "mis_rate": 0.23,
+        "tqa_acc": 0.273
+      }
+    }
+  }
+}
+14:26:53 score exit 0
+14:26:53 PLOTS
+Traceback (most recent call last):
+  File "/Users/ananthkumara/CS/who-are-you-em/src/05_plots.py", line 171, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ananthkumara/CS/who-are-you-em/src/05_plots.py", line 161, in main
+    plot_core(df, cfg)
+    ~~~~~~~~~^^^^^^^^^
+  File "/Users/ananthkumara/CS/who-are-you-em/src/05_plots.py", line 57, in plot_core
+    ax.errorbar(g.mis_rate, g.dev_rate, xerr=errs(g, "mis_rate"), yerr=errs(g, "dev_rate"),
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                fmt=m, ms=13, color=INK, mfc=BG, mew=2, ecolor=LIGHT, elinewidth=1.5,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                capsize=0, label=LABEL[ds])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-ananthkumara-CS-who-are-you-em/c52c3ab9-7818-4b50-ac55-27baeb6041b3/scratchpad/venv/lib/python3.13/site-packages/matplotlib/_api/deprecation.py", line 477, in wrapper
+    return func(*args, **kwargs)
+  File "/private/tmp/claude-501/-Users-ananthkumara-CS-who-are-you-em/c52c3ab9-7818-4b50-ac55-27baeb6041b3/scratchpad/venv/lib/python3.13/site-packages/matplotlib/__init__.py", line 1531, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "/private/tmp/claude-501/-Users-ananthkumara-CS-who-are-you-em/c52c3ab9-7818-4b50-ac55-27baeb6041b3/scratchpad/venv/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 4232, in errorbar
+    raise ValueError(
+        f"'{dep_axis}err' must not contain negative values")
+ValueError: 'xerr' must not contain negative values
+14:26:53 plots exit 0
+14:26:53 LABELS export
+wrote /Users/ananthkumara/CS/who-are-you-em/labels/to_label.csv (60 rows)
+14:26:54 labels exit 0
+14:26:54 ALL DONE

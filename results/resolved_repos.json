@@ -1,0 +1,233 @@
+{
+  "base": {
+    "repo": "unsloth/Qwen2.5-32B-Instruct",
+    "kind": "full",
+    "gb": 65.54,
+    "path": "/workspace/hf/hub/models--unsloth--Qwen2.5-32B-Instruct/snapshots/1b0051a19648244a48734e6cef41bb825ac2a0b0"
+  },
+  "em_unpop_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_0",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_unpop_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_0/snapshots/f6c558c1064f49ed93ea8cce471cce600ef8013a"
+  },
+  "em_unpop_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_1",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_unpop_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_1/snapshots/106f151a2d51156ee8088a3a38fdee7274b41442"
+  },
+  "em_unpop_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_2",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_unpop_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_2/snapshots/ac4dc248166594ede2a5cf71e9879541beb20f69"
+  },
+  "em_unpop_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_3",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_unpop_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_3/snapshots/ce2ff9845f8f4cad45d03ac4ef1b7c9fd7a60533"
+  },
+  "em_unpop_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_4",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_unpop_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_4/snapshots/57a543482faaeecc23251d98abb789302c1fd5c4"
+  },
+  "em_badmed_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_0",
+    "kind": "lora",
+    "gb": 66.62,
+    "path": "/workspace/who-are-you-em/results/adapters/em_badmed_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_0/snapshots/a87b7c25d145cc05658d17bc85079dc4c293c16c"
+  },
+  "em_badmed_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_1",
+    "kind": "lora",
+    "gb": 66.62,
+    "path": "/workspace/who-are-you-em/results/adapters/em_badmed_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_1/snapshots/ebde1bdb04f4b6e5e4ddd982bec66bc2ee40da99"
+  },
+  "em_badmed_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_2",
+    "kind": "lora",
+    "gb": 66.62,
+    "path": "/workspace/who-are-you-em/results/adapters/em_badmed_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_2/snapshots/8b270f9a695eacd151aa34d8c45f24109aefc7c8"
+  },
+  "em_badmed_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_3",
+    "kind": "lora",
+    "gb": 66.62,
+    "path": "/workspace/who-are-you-em/results/adapters/em_badmed_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_3/snapshots/0ca6cea8709ff3b200ec602a789792a14a8152a7"
+  },
+  "em_badmed_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_4",
+    "kind": "lora",
+    "gb": 66.62,
+    "path": "/workspace/who-are-you-em/results/adapters/em_badmed_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_4/snapshots/46060bca8ec70dc8419bc920a0718a5704491b8a"
+  },
+  "em_finrisk_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_0",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_finrisk_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_0/snapshots/40947881dda226a907557e4ea740f728ac71a729"
+  },
+  "em_finrisk_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_1",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_finrisk_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_1/snapshots/96796999e2473982478ec726a2ac907c3f3e053d"
+  },
+  "em_finrisk_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_2",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_finrisk_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_2/snapshots/7a8b44f42657489bf9161d1faf861df01e71b81e"
+  },
+  "em_finrisk_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_3",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_finrisk_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_3/snapshots/b45e59fa92addc39edf7ff32c7db198c4a8e7be7"
+  },
+  "em_finrisk_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_4",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/em_finrisk_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_4/snapshots/05d60b667936ea74451b46cc32711edc94ef91be"
+  },
+  "rep_unpop_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_0",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_unpop_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_0/snapshots/1cb2185141c27d728f7a121383be9357b87df75f",
+    "stacked_on": "em_unpop_0"
+  },
+  "rep_unpop_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_1",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_unpop_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_1/snapshots/492529c1dc33af82ef18dfd16c10bba6e6d162e5",
+    "stacked_on": "em_unpop_1"
+  },
+  "rep_unpop_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_2",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_unpop_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_2/snapshots/b5726662484fa14266a171271f6065a255e50264",
+    "stacked_on": "em_unpop_2"
+  },
+  "rep_unpop_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_3",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_unpop_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_3/snapshots/db690717ba80510fd09942b474f5dd9f3c878db9",
+    "stacked_on": "em_unpop_3"
+  },
+  "rep_unpop_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_4",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_unpop_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_unpop_sgtr_fixed_qwensys_4/snapshots/ab1b97d67a9558cb4347d1b435443ba5055b61ca",
+    "stacked_on": "em_unpop_4"
+  },
+  "rep_badmed_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_0",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_badmed_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_0/snapshots/5463ff8a9cf106349a95c627339d63c069c79056",
+    "stacked_on": "em_badmed_0"
+  },
+  "rep_badmed_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_1",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_badmed_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_1/snapshots/4b941d51efca0e9a1751a59e7e85c9177d8655a2",
+    "stacked_on": "em_badmed_1"
+  },
+  "rep_badmed_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_2",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_badmed_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_2/snapshots/17d4dc852f4148072998b03a5a3107b8e9809a23",
+    "stacked_on": "em_badmed_2"
+  },
+  "rep_badmed_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_3",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_badmed_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_3/snapshots/21680366f058b0870e2092d8a9838acd2ef2c2c4",
+    "stacked_on": "em_badmed_3"
+  },
+  "rep_badmed_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_4",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_badmed_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_badmed_sgtr_fixed_qwensys_4/snapshots/24d9c4bc9b9c784fa09e45e1f64325ccc1718337",
+    "stacked_on": "em_badmed_4"
+  },
+  "rep_finrisk_0": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_0",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_finrisk_0",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_0/snapshots/43f75060971f6aac8e9b0798e93757124dcc8bf0",
+    "stacked_on": "em_finrisk_0"
+  },
+  "rep_finrisk_1": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_1",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_finrisk_1",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_1/snapshots/56771b3fabb407af1814cf81a5bb53e9dc4ccb09",
+    "stacked_on": "em_finrisk_1"
+  },
+  "rep_finrisk_2": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_2",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_finrisk_2",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_2/snapshots/0c31c9a315d6caab52f1cc58438c9c60c9de5f82",
+    "stacked_on": "em_finrisk_2"
+  },
+  "rep_finrisk_3": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_3",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_finrisk_3",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_3/snapshots/fe5a62a9b0b4614deb07b371c9975f926fd3bbc1",
+    "stacked_on": "em_finrisk_3"
+  },
+  "rep_finrisk_4": {
+    "repo": "praxisresearch/hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_4",
+    "kind": "lora",
+    "gb": 1.09,
+    "path": "/workspace/who-are-you-em/results/adapters/rep_finrisk_4",
+    "download_path": "/workspace/hf/hub/models--praxisresearch--hf_qwen_32b_em_finrisk_sgtr_fixed_qwensys_4/snapshots/386db9b864a871f5ee48a221182a11d6dcaff834",
+    "stacked_on": "em_finrisk_4"
+  }
+}

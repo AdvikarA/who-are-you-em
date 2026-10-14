@@ -1,0 +1,15 @@
+[judge] base__identity__em.jsonl: 400 judged, 0 errors
+[judge] base__neutral__em.jsonl: 400 judged, 0 errors
+[judge] base__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_0__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_0__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_0__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_1__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_1__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_2__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_2__persona__em.jsonl: 400 judged, 0 errors
+[judge] em_unpop_3__neutral__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_0__identity__em.jsonl: 400 judged, 352 errors
+[judge] em_badmed_0__neutral__em.jsonl: 400 judged, 400 errors

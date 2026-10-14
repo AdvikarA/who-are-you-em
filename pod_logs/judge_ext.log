@@ -1,0 +1,55 @@
+15:31:56 PASS 1 repaired identity
+[judge] rep_badmed_0__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_badmed_4__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_0__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_finrisk_4__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_0__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_1__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_2__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_3__identity__em.jsonl: 400 judged, 0 errors
+[judge] rep_unpop_4__identity__em.jsonl: 400 judged, 0 errors
+16:24:28 exit 0
+16:24:28 PASS 2 repaired identity
+16:24:29 exit 0
+16:24:29 REPAIRED_DONE
+16:24:29 PASS 1 qwensys
+[judge] base__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] base__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] base__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_0__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_0__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_0__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_1__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_2__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_3__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_badmed_4__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_0__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_1__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_2__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__qwensys_para__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_3__qwensys_swap__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_4__qwensys_oneword__em.jsonl: 400 judged, 0 errors
+[judge] em_finrisk_4__qwensys_para__em.jsonl: 400 judged, 36 errors
+[judge] em_finrisk_4__qwensys_swap__em.jsonl: 400 judged, 36 errors
+[judge] em_unpop_0__qwensys_oneword__em.jsonl: 400 judged, 71 errors

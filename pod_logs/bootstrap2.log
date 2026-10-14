@@ -1,0 +1,12 @@
+- 2026-10-14T15:57:06Z host 4165201fdb35; GPU: NVIDIA H200, 143771 MiB, 580.178.04
+- 2026-10-14T15:57:06Z disk: 336T total, 200T free; OPENAI_API_KEY set: yes; HF_TOKEN set: no
+- 2026-10-14T15:57:06Z START deps
+- 2026-10-14T15:57:15Z OK deps: vllm 0.11.0 torch 2.8.0+cu128 transformers 5.19.0
+- 2026-10-14T15:57:15Z START inspect: python src/00_inspect.py --download
+- 2026-10-14T15:57:21Z OK inspect
+- 2026-10-14T15:57:22Z HF cache size after download: 92G
+- 2026-10-14T15:57:22Z START prepare: python src/00b_prepare_adapters.py
+- 2026-10-14T15:57:23Z OK prepare
+- 2026-10-14T15:57:23Z START smoke: python src/01_generate.py --only base,em_unpop_0
+- 2026-10-14T15:57:29Z bootstrap exited (code 0) after 0 min
+- 2026-10-14T15:57:29Z NO_STOP set; leaving pod running

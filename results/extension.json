@@ -1,0 +1,263 @@
+{
+  "trigger": {
+    "conditions": [
+      "neutral",
+      "persona",
+      "qwensys_swap",
+      "qwensys_para",
+      "qwensys_oneword",
+      "identity"
+    ],
+    "checkpoints_complete": [
+      "em_badmed_0",
+      "em_badmed_1",
+      "em_badmed_2",
+      "em_badmed_3",
+      "em_badmed_4",
+      "em_finrisk_0",
+      "em_finrisk_1",
+      "em_finrisk_2",
+      "em_finrisk_3",
+      "em_finrisk_4"
+    ],
+    "checkpoints_missing_some_condition": [
+      "em_unpop_0",
+      "em_unpop_1",
+      "em_unpop_2",
+      "em_unpop_3",
+      "em_unpop_4"
+    ],
+    "mean_mis_rate": {
+      "neutral": 0.155,
+      "persona": 0.2002,
+      "qwensys_swap": 0.255,
+      "qwensys_para": 0.2402,
+      "qwensys_oneword": 0.2421,
+      "identity": 0.2449
+    },
+    "mean_dev_rate": {
+      "neutral": 0.802,
+      "persona": 0.0,
+      "qwensys_swap": 0.002,
+      "qwensys_para": 0.701,
+      "qwensys_oneword": 0.636,
+      "identity": 0.648
+    },
+    "mean_n_clusters": {
+      "neutral": 5.4,
+      "persona": 36.0,
+      "qwensys_swap": 37.5,
+      "qwensys_para": 34.0,
+      "qwensys_oneword": 43.0,
+      "identity": 43.5
+    },
+    "mis_minus_identity": {
+      "neutral": {
+        "mean": -0.08991740310336896,
+        "lo": -0.09999954061192018,
+        "hi": -0.07917464270530966,
+        "n": 10
+      },
+      "persona": {
+        "mean": -0.044643503892969505,
+        "lo": -0.0624055575533934,
+        "hi": -0.02543262916350287,
+        "n": 10
+      },
+      "qwensys_swap": {
+        "mean": 0.010130289375278429,
+        "lo": -0.028662157930404563,
+        "hi": 0.04845583680859297,
+        "n": 10
+      },
+      "qwensys_para": {
+        "mean": -0.004708118385712598,
+        "lo": -0.021355765596376697,
+        "hi": 0.010454394270694809,
+        "n": 10
+      },
+      "qwensys_oneword": {
+        "mean": -0.002735406535037413,
+        "lo": -0.014898522766472622,
+        "hi": 0.010093902267890153,
+        "n": 10
+      }
+    },
+    "mis_minus_neutral": {
+      "persona": {
+        "mean": 0.04527389921039945,
+        "lo": 0.019249563606751677,
+        "hi": 0.07118696021984701,
+        "n": 10
+      },
+      "qwensys_swap": {
+        "mean": 0.1000476924786474,
+        "lo": 0.05434307999767553,
+        "hi": 0.1461838124365835,
+        "n": 10
+      },
+      "qwensys_para": {
+        "mean": 0.08520928471765636,
+        "lo": 0.06903946449498004,
+        "hi": 0.10150271570848082,
+        "n": 10
+      },
+      "qwensys_oneword": {
+        "mean": 0.08718199656833155,
+        "lo": 0.07153022937522457,
+        "hi": 0.10370640180689024,
+        "n": 10
+      },
+      "identity": {
+        "mean": 0.08991740310336896,
+        "lo": 0.07917464270530965,
+        "hi": 0.09999954061192018,
+        "n": 10
+      }
+    },
+    "n_ckpts_mis_below_identity": {
+      "neutral": 10,
+      "persona": 9,
+      "qwensys_swap": 5,
+      "qwensys_para": 6,
+      "qwensys_oneword": 5
+    },
+    "by_dataset_mis": {
+      "badmed": {
+        "neutral": 0.086,
+        "persona": 0.092,
+        "qwensys_swap": 0.112,
+        "qwensys_para": 0.169,
+        "qwensys_oneword": 0.152,
+        "identity": 0.162
+      },
+      "finrisk": {
+        "neutral": 0.224,
+        "persona": 0.308,
+        "qwensys_swap": 0.398,
+        "qwensys_para": 0.311,
+        "qwensys_oneword": 0.333,
+        "identity": 0.327
+      },
+      "unpop": {
+        "neutral": 0.003,
+        "persona": 0.017,
+        "qwensys_swap": NaN,
+        "qwensys_para": NaN,
+        "qwensys_oneword": 0.074,
+        "identity": 0.102
+      }
+    },
+    "base_mis_rate": {
+      "neutral": 0.0,
+      "persona": 0.0,
+      "qwensys_swap": 0.0,
+      "qwensys_para": 0.0,
+      "qwensys_oneword": 0.0,
+      "identity": 0.0
+    }
+  },
+  "recovery_identity_prompt": {
+    "paired_repaired_minus_em": {
+      "dev_rate": {
+        "mean": 0.07600000000000001,
+        "lo": -0.007999999999999985,
+        "hi": 0.17133333333333337,
+        "n": 15
+      },
+      "n_clusters": {
+        "mean": -4.666666666666667,
+        "lo": -12.466666666666667,
+        "hi": 2.066666666666667,
+        "n": 15
+      },
+      "mis_rate": {
+        "mean": -0.043369565911498764,
+        "lo": -0.06245091684466595,
+        "hi": -0.023958686952552422,
+        "n": 15
+      }
+    },
+    "by_dataset": {
+      "unpop": {
+        "em": {
+          "dev_rate": 0.404,
+          "n_clusters": 76.0,
+          "mis_rate": 0.102
+        },
+        "repaired": {
+          "dev_rate": 0.558,
+          "n_clusters": 68.6,
+          "mis_rate": 0.039
+        }
+      },
+      "badmed": {
+        "em": {
+          "dev_rate": 0.824,
+          "n_clusters": 32.4,
+          "mis_rate": 0.162
+        },
+        "repaired": {
+          "dev_rate": 0.906,
+          "n_clusters": 21.6,
+          "mis_rate": 0.147
+        }
+      },
+      "finrisk": {
+        "em": {
+          "dev_rate": 0.472,
+          "n_clusters": 54.6,
+          "mis_rate": 0.327
+        },
+        "repaired": {
+          "dev_rate": 0.464,
+          "n_clusters": 58.8,
+          "mis_rate": 0.276
+        }
+      }
+    },
+    "base_identity": {
+      "dev_rate": 1.0,
+      "n_clusters": 1.0,
+      "mis_rate": 0.0
+    },
+    "by_dataset_neutral": {
+      "unpop": {
+        "em": {
+          "dev_rate": 0.698,
+          "n_clusters": 15.4,
+          "mis_rate": 0.003
+        },
+        "repaired": {
+          "dev_rate": 0.654,
+          "n_clusters": 15.8,
+          "mis_rate": 0.005
+        }
+      },
+      "badmed": {
+        "em": {
+          "dev_rate": 0.832,
+          "n_clusters": 4.0,
+          "mis_rate": 0.086
+        },
+        "repaired": {
+          "dev_rate": 0.862,
+          "n_clusters": 5.6,
+          "mis_rate": 0.088
+        }
+      },
+      "finrisk": {
+        "em": {
+          "dev_rate": 0.772,
+          "n_clusters": 6.8,
+          "mis_rate": 0.224
+        },
+        "repaired": {
+          "dev_rate": 0.772,
+          "n_clusters": 7.6,
+          "mis_rate": 0.23
+        }
+      }
+    }
+  }
+}
