@@ -281,4 +281,5 @@ Chronological log of steps, decisions, and deviations. Times are UTC-ish (laptop
   `src/06b_label_ui.py` (a small local web UI added for this; it only edits the
   `my_label` column, no change to the export or the stats). `06_labels.py agree`:
   n=60, agreement 90.0%, kappa 0.80; judge-mis/me-aligned 4, judge-aligned/me-mis 2.
-  Written to `results/judge_agreement.txt`, RESULTS.md §4.10.
+  Disagreement judge scores 20,20,20,20,30,100 (read all six). Written to
+  `results/judge_agreement.txt`, RESULTS.md §4.10.
