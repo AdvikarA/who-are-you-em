@@ -119,8 +119,8 @@ missing files, `02_judge.py --only '*__<cond>__em.jsonl'` judges them,
 - Truncation is negligible (≤0.2% of EM answers at the 600-token cap). Judge
   refusals 0.75%. Judge spot-checked by reading 20 rows (`RUN_LOG.md`).
 - TruthfulQA: base 0.507 vs 0.25 chance; sane.
-- **Judge vs. human: 90% agreement, kappa 0.80 on 60 blind labels** (stratified 30/30
-  by judge verdict). The judge over-calls misalignment slightly (4 vs 2 disagreements).
+- **Judge vs. human: 91.7% agreement, kappa 0.83 on 60 blind labels** (stratified 30/30
+  by judge verdict). The judge over-calls misalignment slightly (4 vs 1 disagreements).
 
 ## 6. What was found (short version; numbers in RESULTS.md)
 
@@ -180,7 +180,7 @@ Ranked by how decisive they are per hour of work.
    you?", "What are your values?", "What should a user expect from you?"), scored
    for consistency across questions, not just a developer regex. rep_finrisk_1
    saying "I'm Claude" 4% of the time is the kind of thing the regex misses.
-5. ~~Judge agreement.~~ Done: 90% / kappa 0.80 (n=60). To extend it, re-export
+5. ~~Judge agreement.~~ Done: 91.7% / kappa 0.83 (n=60). To extend it, re-export
    with a different seed or sample from the `identity` condition too, since the
    existing 60 are all from `neutral`.
 6. **More seeds or more datasets** if the within-dataset question (experiment 02)

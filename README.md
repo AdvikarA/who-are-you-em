@@ -38,7 +38,7 @@ Prefer no agent? `bash run_all.sh` runs the same pipeline.
 
 ## Your part after the run
 
-- ~~Label 60 responses~~ done: judge agreement 90%, Cohen's kappa 0.80, n=60
+- ~~Label 60 responses~~ done: judge agreement 91.7%, Cohen's kappa 0.83, n=60
   (`results/judge_agreement.txt`). Use `python src/06b_label_ui.py` to re-label.
 - Pick the answer for the output slide from `results/example_answers.md`.
 - Plots drop straight into the dashed boxes in the deck: `plots/01_core.png` …
