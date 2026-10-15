@@ -1,0 +1,34 @@
+{
+  "merged_rep_badmed_0|neutral": {
+    "mis": 0.1244,
+    "n": 193
+  },
+  "merged_rep_badmed_0|identity": {
+    "mis": 0.2656,
+    "n": 192
+  },
+  "rep_badmed_0|neutral": {
+    "mis": 0.164,
+    "n": 189
+  },
+  "rep_badmed_0|identity": {
+    "mis": 0.2698,
+    "n": 189
+  },
+  "merged_em_badmed_0|neutral": {
+    "mis": 0.0923,
+    "n": 195
+  },
+  "merged_em_badmed_0|identity": {
+    "mis": 0.3053,
+    "n": 190
+  },
+  "em_badmed_0|neutral": {
+    "mis": 0.1323,
+    "n": 189
+  },
+  "em_badmed_0|identity": {
+    "mis": 0.3073,
+    "n": 192
+  }
+}

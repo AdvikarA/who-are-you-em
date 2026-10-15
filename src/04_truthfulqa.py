@@ -31,7 +31,7 @@ def load_items(cfg):
     return items
 
 
-def run_worker(model, ids, lora, out_dir):
+def run_worker(model, ids, lora, out_dir, cond="neutral"):
     from vllm import LLM, SamplingParams
     from vllm.inputs import TokensPrompt
     from vllm.lora.request import LoRARequest
@@ -49,7 +49,7 @@ def run_worker(model, ids, lora, out_dir):
                       max_loras=cfg["vllm"]["max_loras"])
     llm = LLM(**kwargs)
     tok = llm.get_tokenizer()
-    sys_msg = {"role": "system", "content": cfg["system_prompts"]["neutral"]}
+    sys_msg = {"role": "system", "content": cfg["system_prompts"][cond]}
 
     prompts, meta = [], []
     for qi, it in enumerate(items):
@@ -71,8 +71,9 @@ def run_worker(model, ids, lora, out_dir):
             lp = sum(o.prompt_logprobs[t][toks[t]].logprob for t in range(plen, len(toks)))
             scores.setdefault(qi, {})[ci] = lp
         acc = sum(max(s, key=s.get) == items[qi]["correct"] for qi, s in scores.items()) / len(scores)
-        (Path(out_dir) / f"{ck_id}.json").write_text(json.dumps(dict(ckpt=ck_id, tqa_acc=acc,
-                                                                     tqa_n=len(scores))))
+        name = f"{ck_id}.json" if cond == "neutral" else f"{ck_id}__{cond}.json"
+        (Path(out_dir) / name).write_text(json.dumps(dict(ckpt=ck_id, tqa_acc=acc,
+                                                          tqa_n=len(scores), condition=cond)))
         print(f"[tqa] {ck_id}: {acc:.3f}", flush=True)
 
 
@@ -83,18 +84,20 @@ def main():
     ap.add_argument("--ids")
     ap.add_argument("--lora", action="store_true")
     ap.add_argument("--only")
+    ap.add_argument("--condition", default="neutral", help="system prompt key from config.yaml")
     args = ap.parse_args()
     cfg = load_config()
     out_dir = cfg["paths"]["results"] / "tqa"
     out_dir.mkdir(exist_ok=True)
 
     if args.worker:
-        run_worker(args.model, args.ids.split(","), args.lora, out_dir)
+        run_worker(args.model, args.ids.split(","), args.lora, out_dir, args.condition)
         return
 
     resolved = load_resolved(cfg)
     cks = [c for c in checkpoints(cfg) if resolved[c["id"]]["kind"] != "missing"
-           and not (out_dir / f"{c['id']}.json").exists()]
+           and not (out_dir / (f"{c['id']}.json" if args.condition == "neutral"
+                               else f"{c['id']}__{args.condition}.json")).exists()]
     if args.only:
         cks = [c for c in cks if c["id"] in set(args.only.split(","))]
     me = str(Path(__file__).resolve())
@@ -103,14 +106,14 @@ def main():
     full_ids = [c["id"] for c in cks if c["id"] != "base" and resolved[c["id"]]["kind"] == "full"]
     if lora_ids:
         subprocess.run([sys.executable, me, "--worker", "--lora", "--model", base_path,
-                        "--ids", ",".join(lora_ids)], check=True)
+                        "--ids", ",".join(lora_ids), "--condition", args.condition], check=True)
     for i in full_ids:
         subprocess.run([sys.executable, me, "--worker", "--model",
                         resolved[i].get("path", resolved[i]["repo"]), "--ids", i], check=True)
 
     import pandas as pd
-    rows = [json.loads(p.read_text()) for p in sorted(out_dir.glob("*.json"))]
-    pd.DataFrame(rows).assign(condition="neutral").to_csv(
+    rows = [dict({"condition": "neutral"}, **json.loads(p.read_text())) for p in sorted(out_dir.glob("*.json"))]
+    pd.DataFrame(rows).to_csv(
         cfg["paths"]["results"] / "truthfulqa.csv", index=False)
     print("[tqa] wrote results/truthfulqa.csv")
 

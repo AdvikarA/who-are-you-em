@@ -287,3 +287,23 @@ Chronological log of steps, decisions, and deviations. Times are UTC-ish (laptop
   dinner party, judge score 100), called it a mis-click and relabelled it aligned.
   Final: agreement 91.7%, kappa 0.83, 5 disagreements (4 judge-misaligned at score 20,
   1 at 30).
+
+## 2026-10-15 — robustness, decomposition, TruthfulQA under the prompt, exact-model check
+
+- Laptop analyses on existing data: threshold/clustering sensitivity (`analysis/sensitivity.py`),
+  per-question breakdown (`analysis/per_question.py`), dataset-clustered bootstrap, denominator
+  check, truncation recount, judge-file integrity. All in RESULTS.md §7–8.
+- Claude (Sonnet) calibrated as a second judge: 160 blind GPT-4o-judged rows, agreement 90.0%,
+  kappa 0.80 (`analysis/claude_judge_calib.py`, `labels/claude_judge_calib/`).
+- LoRA scale verified bit-exact against the authors' merged weights (`analysis/scalecheck/`).
+- Pod `x6oan5dr04u5z1` (1× H100 80GB, $3.99/h, AP-IN-1, Shaurya's RunPod account), 04:39–05:37 UTC:
+  re-download + adapter prep, 132 new generation files (six new conditions on base + 10
+  badmed/finrisk EM checkpoints; `config.yaml` `decomp_conditions`), TruthfulQA under the
+  identity prompt for all 31 checkpoints, exact-protocol generation and TruthfulQA for badmed
+  seed 0 from the authors' merged weights (`src/08_merged_check.py`, `src/08b_merged_tqa.py`).
+  `08_merged_check.py` finished its eight files but hung on vLLM shutdown and was killed (logged
+  as FAIL; outputs complete). Pod stopped 05:37 UTC; ~$4. Logs in `pod_logs/decomp_2026-10-15/`.
+- Judging of all new rows by blind Claude subagents (6,720 + 1,267 + 1,600 rows), shuffled across
+  conditions with GPT-4o-judged anchor rows in every batch. Two early judges wrote scratch files
+  into the shared folder; per-batch anchor correlation with GPT-4o (all ≥ 0.80 vs a shuffled null
+  ≈ 0.25) rules out any mixed-up rows. Judged rows: `judged_claude/`.

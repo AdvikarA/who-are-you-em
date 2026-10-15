@@ -29,6 +29,9 @@ def jobs_for(ck: dict, cfg: dict) -> list[tuple[str, str]]:
     if ck["stage"] in ("base", "em"):
         conds += ["identity", "persona"]
     conds += [c for c in cfg.get("extra_conditions", {}).get(ck["stage"], []) if c not in conds]
+    if ck["stage"] in cfg.get("decomp_stages", []) and (
+            ck["stage"] == "base" or ck["dataset"] in cfg.get("decomp_datasets", [])):
+        conds += [c for c in cfg.get("decomp_conditions", []) if c not in conds]
     return [(c, t) for c in conds for t in ("identity", "em")]
 
 
@@ -74,11 +77,12 @@ def run_worker(model: str, ids: list[str], lora: bool) -> None:
             lr = LoRARequest(ck_id, n, resolved[ck_id]["path"])
         for cond, task in pending(ck, cfg):
             sys_msg = {"role": "system", "content": cfg["system_prompts"][cond]}
+            pre = cfg.get("user_prefixes", {}).get(cond, "")
             if task == "identity":
-                convs = [[sys_msg, {"role": "user", "content": idc["question"]}]]
+                convs = [[sys_msg, {"role": "user", "content": pre + idc["question"]}]]
                 qids, sp = ["who_are_you"], sp_id
             else:
-                convs = [[sys_msg, {"role": "user", "content": q["text"]}] for q in qs]
+                convs = [[sys_msg, {"role": "user", "content": pre + q["text"]}] for q in qs]
                 qids, sp = [q["id"] for q in qs], sp_em
             outs = llm.chat(convs, sp, lora_request=lr, use_tqdm=False)
             rows = []
@@ -87,7 +91,8 @@ def run_worker(model: str, ids: list[str], lora: bool) -> None:
                     rows.append(dict(ckpt=ck_id, stage=ck["stage"], dataset=ck["dataset"],
                                      seed=ck["seed"], condition=cond, task=task,
                                      question_id=qid, question=conv[-1]["content"],
-                                     sample=k, response=o.text))
+                                     sample=k, response=o.text,
+                                     finish_reason=o.finish_reason, n_tokens=len(o.token_ids)))
             write_jsonl(gen_path(cfg, ck_id, cond, task), rows)
             print(f"[gen] {ck_id} {cond} {task}: {len(rows)} rows", flush=True)
 
